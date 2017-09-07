@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+Наши группы
+{% endblock %}
+
+{% block content %}
+<h2 class="align-center">Наши группы</h2>
+<div class="gallery">
+    {% for item in groups_list %}
+    	<a href="/our-grups/{{ item.id }}">
+    		<img src="{{ item.image.url_200x200 }}" style="margin-right: 10px; width: 200px;">
+            {{ item.name }}
+    	</a>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+Options +ExecCGI
+AddHandler fcgid-script .py .rb
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ cgi-bin/django-wrapper.fcgi/$ [QSA,L]

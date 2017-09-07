@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+Фотогалерея
+{% endblock %}
+
+{% block content %}
+
+{% if not photos_list %}
+<strong>Пока фотографий нет.</strong>
+{% else %}
+	{% for name in gallery_list %}
+		<h2 class="align-center">Фотоальбом - {{ name.name }}</h2>
+	{% endfor %}
+{% endif %}
+
+{% for photo in photo_page %}	
+	<a rel="lightbox[a]" href="{{ photo.image.url_800x600 }}">
+		<img src="{{ photo.image.url_200x200 }}" style="float: left; margin-right: 10px; width: 200px;">
+	</a>
+{% endfor %}
+<div class="cleared"></div>
+
+{% if photo_count > 10 %}
+	<div id="pagination" class="grid_24 padbot6">				
+		<div class="items"> 
+		<b>Страницы:</b>       
+			{% if prev >= 5 %}
+			... 
+			{% endif %}
+			
+			{% for page in range_prev  %}
+			    <a href="?page={{ page }}" class="link4">{{ page }}</a>                            
+			{% endfor %}
+	       
+			<span class="current">{{ photo_page.number }}</span>
+			
+			{% for page in range_next %}                            
+			    <a href="?page={{ page }}" class="link4">{{ page }}</a>                            
+			{% endfor %}
+	       
+			{% if next >= 5 %}
+			...
+			{% endif %}
+			<p></p>
+		</div>
+	</div>
+{% endif %}
+
+{% endblock %}

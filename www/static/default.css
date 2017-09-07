@@ -1,0 +1,145 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #FFFFFF;
+}
+
+
+form {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+}
+
+
+body, th, td, input, textarea, select {
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #4C4C4C;
+}
+
+p, blockquote, ul, ol, dl {
+	margin-top: 0px;
+	margin-bottom: 1em;
+	text-align: justify;
+}
+
+a {
+	color: #197400;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+.style1 {
+}
+
+.style1 a {
+}
+
+.style1 a:hover {
+}
+
+.link1 {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.link1:hover {
+	text-decoration: underline;
+}
+
+.link2 {
+	color: #FFFFFF;
+}
+
+.text1 {
+	font-size: 17px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	color: #FFFFFF;
+}
+
+.text2 {
+	color: #FFFFFF;
+}
+
+.text3 {
+	font-size: 17px;
+	color: #000000;
+}
+
+.text4 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 19px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	color: #30556E;
+}
+
+.text5 {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	font-size: 11px;
+	color: #76838B;
+}
+
+.text6 {
+	text-align: center;
+	font-size: 10px;
+	color: #76838B;
+}
+
+.bg1 { 
+	background: url(images/img4.png) repeat-x left top; height: 40px; 
+}
+
+.bg2 { 
+	background: url(images/img3.png) no-repeat left top; height: 200px; 
+}
+
+.bg3 { 
+	background: url(images/img5.png) repeat-x left top; height: 100px; 
+}
+
+.bg4 { 
+	/*background: url(images/logo1.png) no-repeat left top; height: 150px; */
+}
+
+.align-justify { 
+	text-align: justify; 
+}
+
+.align-right { 
+	text-align: right; 
+}
+
+img { border: none; }
+
+.img1 {
+	float: left;
+	margin: 3px 15px 0px 0px;
+}
+
+.img2 {
+	float: right;
+	margin: 3px 0px 0px 15px;
+}
+
+hr { display: none; }
+
+.hr1 {
+	height: 1px;
+}
+

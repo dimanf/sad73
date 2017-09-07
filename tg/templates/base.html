@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+<head>
+    <!--
+    Created by Artisteer v3.0.0.33215
+    Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}lightbox/css/lightbox.css" type="text/css" />
+    <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
+
+    <script type="text/javascript" src="{{ STATIC_URL }}jquery.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}script.js"></script>
+    <script src="{{ STATIC_URL }}lightbox/js/lightbox.js"></script>
+
+    <script language="JavaScript" type="text/javascript">
+      /*<![CDATA[*/
+      var Lst;
+
+      function CngClass(obj){
+       if (Lst) Lst.className='';
+       obj.className='active';
+       Lst=obj;
+      }
+
+      /*]]>*/
+    </script>
+
+</head>
+<body>
+<div id="art-page-background-glare">
+        <div id="art-page-background-glare-image">
+    <div id="art-main">
+        <div class="art-sheet">
+            <div class="art-sheet-tl"></div>
+            <div class="art-sheet-tr"></div>
+            <div class="art-sheet-bl"></div>
+            <div class="art-sheet-br"></div>
+            <div class="art-sheet-tc"></div>
+            <div class="art-sheet-bc"></div>
+            <div class="art-sheet-cl"></div>
+            <div class="art-sheet-cr"></div>
+            <div class="art-sheet-cc"></div>
+            <div class="art-sheet-body">
+                <div class="art-header">
+                    <div class="art-header-center">
+                        <div class="art-header-png"></div>
+                    </div>
+                    <div class="art-logo">
+                     <h1 id="name-text" class="art-logo-name"><a href="/"></a></h1>
+                    </div>
+                </div>
+                <div class="art-nav">
+                	{% include "menu.html" %}
+                </div>
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-sidebar1">
+                          <div class="art-vmenublock">
+                              <div class="art-vmenublock-tl"></div>
+                              <div class="art-vmenublock-tr"></div>
+                              <div class="art-vmenublock-bl"></div>
+                              <div class="art-vmenublock-br"></div>
+                              <div class="art-vmenublock-tc"></div>
+                              <div class="art-vmenublock-bc"></div>
+                              <div class="art-vmenublock-cl"></div>
+                              <div class="art-vmenublock-cr"></div>
+                              <div class="art-vmenublock-cc"></div>
+                              <div class="art-vmenublock-body">
+                                          <div class="art-vmenublockheader">
+                                              <div class="l"></div>
+                                              <div class="r"></div>
+                                              <h3 class="t">Навигация по сайту</h3>
+                                          </div>
+                                          <div class="art-vmenublockcontent">
+                                              <div class="art-vmenublockcontent-body">
+                                                          <ul class="art-vmenu">
+                                                            <li>
+                                                              <a href="/"><span class="l"></span><span class="r"></span><span class="t">Главная</span></a>
+                                                            </li>
+                                                            <li>
+                                                              <a href="/info/"><span class="l"></span><span class="r"></span><span class="t">Официальная&nbsp;информация</span></a>
+                                                                  <ul>
+                                                                <li><a href="/structuredou/">Структура ДОУ</a></li>
+                                                                <li><a href="/structureupravleniya/">Структура управления ДОУ</a></li>
+                                                                <li><a href="/history/">Историческая справка</a></li>
+                                                              </ul>
+                                                            </li>
+                                                            <li class="active">
+                                                              <a class="active" href="/documents/"><span class="l"></span><span class="r"></span><span class="t">Документы</span></a>
+                                                              <ul class="active">
+                                                                <li><a href="/uchdoc/">Учредительные документы</a></li>
+                                                                <li><a href="/progams-plans/" class="active">Программы, планы</a></li>
+                                                                <li><a href="/finans-docs/">Финансовые документы</a></li>
+                                                                <li><a href="/reports/">Отчеты</a></li>
+                                                                <li><a href="/local-acts/">Локальные акты</a></li>
+                                                              </ul>
+                                                            </li>
+                                                            <li class="active">
+                                                              <a class="active" href="/about-us/"><span class="l"></span><span class="r"></span><span class="t">Знакомьтесь, это мы!</span></a>
+                                                              <ul class="active">
+                                                                <li><a href="/administration-dou/">Администрация ДОУ</a></li>
+                                                                <li><a href="/workers-dou/">Сотрудники ДОУ</a></li>
+                                                              </ul>
+                                                            </li>
+                                                            <li class="active">
+                                                              <a class="active" href="/our-grups/"><span class="l"></span><span class="r"></span><span class="t">Наши группы</span></a>
+                                                            </li>
+
+<!--                                                             <li>
+                                                              <a href="/tour/"><span class="l"></span><span class="r"></span><span class="t">Экскурсия по ДОУ</span></a>
+                                                            </li> -->
+
+                                                            <li class="active">
+                                                              <a class="active" href="/education-activities/"><span class="l"></span><span class="r"></span><span class="t">Образовательная&nbsp;деятельность</span></a>
+                                                              <ul class="active">
+                                                                <li><a href="/tasks/">Годовые задачи и цели</a></li>
+                                                                <!-- <li><a href="/programms-and-plans/">Программы и планы</a></li> -->
+                                                                <li><a href="/education-process/">Образовательный процесс</a></li>
+                                                                <li><a href="/social-cooperation/">Сотрудничество с социумом</a></li>
+                                                              </ul>
+                                                            </li>
+
+
+                                                            <li class="active">
+                                                              <a class="active" href="/other-services/"><span class="l"></span><span class="r"></span><span class="t">Дополнительные услуги</span></a>
+                                                              <ul class="active">
+                                                                <li><a href="/normative-documents/">Нормативные документы</a></li>
+                                                                <li><a href="/services-and-rates/">Услуги и тарифы</a></li>
+                                                              </ul>
+                                                            </li>
+
+                                                            <li class="active">
+                                                              <a class="active" href="/methodist-page/"><span class="l"></span><span class="r"></span><span class="t">Методическая страничка</span></a>
+                                                              <ul class="active">
+                                                                <li><a href="/attestation/">Аттестация</a></li>
+                                                                <li><a href="/pedsovet/">Готовимся к педсовету</a></li>
+                                                                <li><a href="/high-educator-sovet/">Старший воспитатель советует</a></li>
+                                                                <li><a href="/education-workshop/">Педагогическая мастерская</a></li>
+                                                                <li><a href="/words-of-wisdom/">Мудрые мысли</a></li>
+                                                              </ul>
+                                                            </li>
+
+                                                            <li class="active">
+                                                              <a class="active" href="/medicine-page/"><span class="l"></span><span class="r"></span><span class="t">Медицинская страничка</span></a>
+                                                              <ul class="active">
+                                                                <li><a href="/food/">Питание дошкольников</a></li>
+                                                                <li><a href="/medicine-story/">Медицинский вестник</a></li>
+                                                              </ul>
+                                                            </li>
+
+                                                            <li class="active">
+                                                              <a class="active" href="/question-answer/"><span class="l"></span><span class="r"></span><span class="t">Советы специалистов</span></a>
+                                                              <ul class="active">
+                                                                <li><a href="/speech-therapist/">Кабинет логопеда</a></li>
+                                                                <li><a href="/music-room/">Музыкальный Кабинет</a></li>
+                                                                <li><a href="/physical-culture-room/">Кабинет физинструктора</a></li>
+                                                              </ul>
+                                                            </li>
+
+                                                            <li class="active">
+                                                              <a class="active" href="/for-you-parents/"><span class="l"></span><span class="r"></span><span class="t">Для Вас, родители!</span></a>
+                                                              <ul class="active">
+                                                                <li><a href="/go-to-kidgarden/">Поступаем в детский сад</a></li>
+                                                                <li><a href="/questions/">Вопросы оплаты в ДОУ</a></li>
+                                                              </ul>
+                                                            </li>
+
+                                                            <li class="active">
+                                                              <a class="active" href="/safe-childhood/"><span class="l"></span><span class="r"></span><span class="t">Безопасное детство</span></a>
+                                                              <ul class="active">
+                                                                <li><a href="/helpful-information/">Полезная информация</a></li>
+                                                                <li><a href="/normative-base/">Нормативная база</a></li>
+                                                                <li><a href="/protection-right-child/">Защита прав ребенка</a></li>
+                                                                <li><a href="/school-safety/">Школа безопасности</a></li>
+                                                              </ul>
+                                                            </li>
+
+                                                            <li>
+                                                              <a href="/progress-dou/"><span class="l"></span><span class="r"></span><span class="t">Достижения ДОУ</span></a>
+                                                            </li>
+
+                                                            <li>
+                                                              <a href="/photos/"><span class="l"></span><span class="r"></span><span class="t">Фотогалерея</span></a>
+                                                            </li>
+                                                            <li style="width: 227px;">
+                                                              <a href="/konkurs-zdorovyie-deti-zdorovaya-strana/"><span class="l"></span><span class="r"></span><span class="t">Здоровые дети-здоровая страна</span></a>
+                                                            </li>
+                                                            <li>
+                                                              <a href="/70_let_pobede/">
+                                                                <span class="l"></span>
+                                                                <span class="r"></span>
+                                                                <span class="t">70 лет Великой Победе</span>
+                                                              </a>
+                                                            </li>
+                                                            <li>
+                                                              <a href="/vospitatel_goda/">
+                                                                <span class="l"></span>
+                                                                <span class="r"></span>
+                                                                <span class="t">Воспитатель года 2016</span>
+                                                              </a>
+                                                            </li>
+                                                            <li>
+                                                              <a href="/vospitatel_goda_2017/">
+                                                                <span class="l"></span>
+                                                                <span class="r"></span>
+                                                                <span class="t">Воспитатель года 2017</span>
+                                                              </a>
+                                                            </li>
+                                                            <li>
+                                                              <a href="/holidays/">
+                                                                <span class="l"></span>
+                                                                <span class="r"></span>
+                                                                <span class="t">Выходные дни в детском саду</span>
+                                                              </a>
+                                                            </li>
+                                                          </ul>
+
+                                          		<div class="cleared"></div>
+                                              </div>
+                                          </div>
+                          		<div class="cleared"></div>
+                              </div>
+                          </div>
+                          <div class="cleared"></div>
+                        </div>
+                        <div class="art-layout-cell art-content">
+                          <div class="art-post">
+                              <div class="art-post-tl"></div>
+                              <div class="art-post-tr"></div>
+                              <div class="art-post-bl"></div>
+                              <div class="art-post-br"></div>
+                              <div class="art-post-tc"></div>
+                              <div class="art-post-bc"></div>
+                              <div class="art-post-cl"></div>
+                              <div class="art-post-cr"></div>
+                              <div class="art-post-cc"></div>
+                              <div class="art-post-body">
+                          <div class="art-post-inner art-article">
+
+                                          <div class="art-postcontent">
+
+
+                                              {% block content %}{% endblock %}
+
+
+                                          </div>
+                                          <div class="cleared"></div>
+                          </div>
+
+                          		<div class="cleared"></div>
+                              </div>
+                          </div>
+
+                          <div class="cleared"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="cleared"></div>
+                <div class="art-footer">
+                    <div class="art-footer-t"></div>
+                    <div class="art-footer-l"></div>
+                    <div class="art-footer-b"></div>
+                    <div class="art-footer-r"></div>
+                    <div class="art-footer-body">
+
+                        <div class="art-footer-text">
+                            <a href="#"></a>
+                        </div>
+                		<div class="cleared"></div>
+                    </div>
+                </div>
+        		<div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <p class="art-page-footer">Разработано компанией: <a href="http://bs-soft.org/">http://bs-soft.org/</a>.</p>
+        <p class="art-page-footer">&copy; ДОУ Детский сад №73.  {% now "Y" %}  г.</p>
+    </div>
+        </div>
+    </div>
+</body>
+</html>

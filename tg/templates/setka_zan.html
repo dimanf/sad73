@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Группа {{ setzan.group }}
+{% endblock %}
+
+{% block content %}
+<h2 class="align-center">Группа - {{ setzan.group }}</h2>
+<h4 class="align-center">Сетка занятий</h4>
+{% autoescape off %}
+    <p>{{ setzan.text }}</p>
+{% endautoescape %}
+
+{% endblock %}

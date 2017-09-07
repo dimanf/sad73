@@ -1,0 +1,39 @@
+                    <div class="l"></div>
+                	<div class="r"></div>
+                	<ul class="art-menu">
+                		<li>
+                			<a href="/" {% if path == '' %} class='active' {% endif %}><span class="l"></span><span class="r"></span><span class="t">Главная</span></a>
+                		</li>
+                		<!-- <li>
+                			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Menu Item</span></a>
+                			<ul>
+                				<li><a href="#">Menu Subitem 1</a>
+                					<ul>
+                						<li><a href="#">Menu Subitem 1.1</a></li>
+                						<li><a href="#">Menu Subitem 1.2</a></li>
+                						<li><a href="#">Menu Subitem 1.3</a></li>
+                					</ul>
+                				</li>
+                				<li><a href="#">Menu Subitem 2</a></li>
+                				<li><a href="#">Menu Subitem 3</a></li>
+                			</ul>
+                		</li> !-->
+                		<li>
+                			<a href="/contacts/" {% if path == 'contacts' %} class='active' {% endif %}><span class="l"></span><span class="r"></span><span class="t">Контакты</span></a>
+                		</li>
+                    <li>
+                      <a href="/useful-links/" {% if path == 'useful-links' %} class='active' {% endif %}><span class="l"></span><span class="r"></span><span class="t">Полезные ссылки</span></a>
+                    </li>
+                    <li>
+                      <a href="/useful-phones/" {% if path == 'useful-phones' %} class='active' {% endif %}><span class="l"></span><span class="r"></span><span class="t">Полезные телефоны</span></a>
+                    </li>
+                    <li>
+                      <a href="/thanks/" {% if path == 'thanks' %} class='active' {% endif %}><span class="l"></span><span class="r"></span><span class="t">Новости</span></a>
+                    </li>
+                    <li>
+                      <a href="/congratulations/" {% if path == 'congratulations' %} class='active' {% endif %}><span class="l"></span><span class="r"></span><span class="t">Поздравляем</span></a>
+                    </li>
+                    <li>
+                      <a href="/profsouz/" {% if path == 'profsouz' %} class='active' {% endif %}><span class="l"></span><span class="r"></span><span class="t">Профсоюз</span></a>
+                    </li>
+                	</ul>

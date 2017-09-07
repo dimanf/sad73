@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+Группа {{ work_wu.group }}
+{% endblock %}
+
+{% block content %}
+
+<h2 class="align-center">Группа - {{ work_wu.group }}</h2>
+<h4 class="align-center">С нами работают</h4>
+{% autoescape off %}
+    <p>{{ work_wu.text }}</p>
+{% endautoescape %}
+
+{% endblock %}

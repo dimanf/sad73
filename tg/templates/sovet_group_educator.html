@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Группа {{ sovet_educator.group }}
+{% endblock %}
+
+{% block content %}
+<h2 class="align-center">Группа - {{ sovet_educator.group }}</h2>
+<h4 class="align-center">Советы воспитателя</h4>
+{% autoescape off %}
+    <p>{{ sovet_educator.text }}</p>
+{% endautoescape %}
+
+{% endblock %}

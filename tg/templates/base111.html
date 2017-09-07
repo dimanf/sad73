@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>{% block title %}{% endblock %}</title>
+<link href="{{ STATIC_URL }}default.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+	@import url("layout.css");
+-->
+</style>
+</head>
+<body>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr valign="top">
+		<td width="225" class="bg4"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr align="center">
+				<td>
+					<a href="/"><img src="{{ STATIC_URL }}images/logo.png" alt="" style="height: 140px;" /></a>
+				</td>
+			</tr>
+		</table></td>
+		<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td><img src="{{ STATIC_URL }}images/spacer.gif" alt="" width="100" height="100" /></td>
+			</tr>
+			<tr>
+				<td class="bg1"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="height: 40px;">
+					<tr align="center">
+						<td><a href="/" class="link1">Главная</a></td>
+						<td><img src="{{ STATIC_URL }}images/img6.gif" alt="" width="2" height="40" /></td>
+						<td><a href="/mission/" class="link1">Миссия</a></td>
+						<td><img src="{{ STATIC_URL }}images/img6.gif" alt="" width="2" height="40" /></td>
+						<td><a href="/services/" class="link1">Услуги</a></td>
+						<td><img src="{{ STATIC_URL }}images/img6.gif" alt="" width="2" height="40" /></td>
+						<td><a href="/prospects/" class="link1">Перспективы</a></td>
+						<td><img src="{{ STATIC_URL }}images/img6.gif" alt="" width="2" height="40" /></td>
+						<td><a href="/contacts/" class="link1">Контакты</a></td>
+					</tr>
+				</table></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<table width="727" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr valign="top">
+		<td width="727">&nbsp;</td>
+	</tr>
+	<tr valign="top">
+		<td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+			
+			<tr>
+				<td><!-- Content start -->
+					{% block content %}
+					{% endblock %}
+				</td><!-- Content end -->
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr valign="top">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<table width="778" border="0" align="center" cellpadding="0" cellspacing="0" class="bg3">
+	<tr>
+		<td class="text6">Copyright &copy; {% now "Y" %} Тайм Групп</td>
+	</tr>
+</table>
+</body>
+</html>

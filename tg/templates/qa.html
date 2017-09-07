@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}
+Вопрос-ответ
+{% endblock %}
+
+{% block content %}
+
+<h2>Вопрос/ответ</h2>
+<blockquote>
+	<p>Здесь вы можете оставить интересующий вас вопрос,</p>
+	<p>мы обязательно на него ответим.</p>
+</blockquote>
+
+{% if not quest_answ %}
+<p><strong></strong>Пока вопросов нет.</p>
+{% endif %}
+
+{% for quest in quest_page %}
+	
+	<p><strong>{{ quest.date_create|date:"j E Y" }}</strong> {{ quest.name }} </p>
+	<p><i>{{ quest.email }}</i></p>
+	<p>{{ quest.text }}</p>
+	
+{% endfor %}
+
+{% if quest_count > 10 %}
+				<div id="pagination" class="grid_24 padbot6">				    
+					
+					<div class="items"> 
+					<b>Страницы:</b>       
+						{% if prev >= 5 %}
+						... 
+						{% endif %}
+						
+						{% for page in range_prev  %}
+						    <a href="?page={{ page }}" class="link4">{{ page }}</a>                            
+						{% endfor %}
+	                   
+						<span class="current">{{ quest_page.number }}</span>
+						
+						{% for page in range_next %}                            
+						    <a href="?page={{ page }}" class="link4">{{ page }}</a>                            
+						{% endfor %}
+	                   
+						{% if next >= 5 %}
+						...
+						{% endif %}
+						<p></p>
+					</div>
+				</div>
+			{% endif %}
+
+		<script type="text/javascript">
+	        $(document).ready(function() {
+	        	var form = $('#qa');
+	        	var errors = $('#qaul.errorlist');
+	        	
+	        	form.find("a[data-type='submit']").click(function() {
+	        		$('#qa-submit').click();	        		       		
+	        	});
+	        	
+	        	form.find("a[data-type='reset']").click(function() {
+	        		form.find('input, textarea').val('');
+	        		form.find('div.field').removeClass('error');
+	        		errors.empty();
+	        	});
+	        	
+	        	$('#id_phone').mask('+7 (999) 999 99 99');
+	        })
+		</script>
+
+<form id="qa" action="" method="post">
+	<div class="field">
+		{{ form.name }}
+		{{ form.name.errors }}	 
+	</div>
+	<div>
+		{{ form.email }}
+		{{ form.email.errors }}		
+	</div>
+	<div>
+		{{ form.text }}
+		{{ form.text.errors }}
+	</div>
+	
+	<a class="art-button" data-type="submit">Отправить</a>				
+
+	<input id="qa-submit" type="submit" value="Отправить" style="display: none;">
+	
+</form>
+
+{% endblock %}

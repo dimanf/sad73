@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Группа {{ live_group.group }}
+{% endblock %}
+
+{% block content %}
+<h2 class="align-center">Группа - {{ live_group.group }}</h2>
+<h4 class="align-center">Жизнь нашей группы</h4>
+{% autoescape off %}
+    <p>{{ live_group.text }}</p>
+{% endautoescape %}
+
+{% endblock %}

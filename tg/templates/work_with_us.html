@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+С нами работают
+{% endblock %}
+
+{% block content %}
+<h2 class="align-center">Группа - {{ group.group }}</h2>
+{% autoescape off %}
+    <p>{{ group.text }}</p>
+{% endautoescape %}
+
+<ul>
+	<LI><a href="/our-grups/work-with-us/{{ work_wu.group_id }}/">С нами работают</a></LI>
+	<li><a href="/our-grups/day-regimen/{{ mode_day.group_id }}/">Режим дня</a></li>
+	<li><a href="/our-grups/setka-zanyatiy/{{ setka.group_id }}/">Сетка занятий</a></li>
+	<li><a href="/our-grups/live-our-grups/{{ live_group.group_id }}/">Жизнь нашей группы</a></li>
+	<li><a href="/our-grups/sovet-educator/{{ sovet_educator.group_id }}/">Советы воспитателя</a></li>
+</ul>
+
+{% endblock %}

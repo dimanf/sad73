@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Группа {{ mode_day.group }}
+{% endblock %}
+
+{% block content %}
+<h2 class="align-center">Группа - {{ mode_day.group }}</h2>
+<h4 class="align-center">Режим дня</h4>
+{% autoescape off %}
+    <p>{{ mode_day.text }}</p>
+{% endautoescape %}
+
+{% endblock %}
